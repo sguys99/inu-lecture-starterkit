@@ -39,10 +39,11 @@
   --color-on-dark: #ffffff;
 
   /* --- Typography : Font Family ---
-   * Apple SF Pro는 Apple 플랫폼에서만 system-ui로 resolve 됩니다.
-   * 비-Apple 플랫폼 대체용으로 Inter(Google Fonts)를 스택에 포함합니다. */
-  --font-display: "SF Pro Display", system-ui, -apple-system, "Inter", sans-serif;
-  --font-text: "SF Pro Text", system-ui, -apple-system, "Inter", sans-serif;
+   * 영문: Apple SF Pro(Apple 한정) → Inter(비-Apple 대체).
+   * 한글: Pretendard 로 통일 — 글리프 폴백상 system-ui 보다 앞에 두어야
+   *        한글 OS 기본폰트(Malgun 등)로 새지 않습니다. */
+  --font-display: "SF Pro Display", "Inter", "Pretendard", system-ui, -apple-system, sans-serif;
+  --font-text: "SF Pro Text", "Inter", "Pretendard", system-ui, -apple-system, sans-serif;
 
   /* --- Typography : Scale (size / weight / line-height / letter-spacing) --- */
   --fs-hero-display: 56px;   --lh-hero-display: 1.07;  --ls-hero-display: -0.28px;  --fw-hero-display: 600;

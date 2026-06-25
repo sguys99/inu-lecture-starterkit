@@ -330,6 +330,7 @@ Store and shop surfaces retain the same chassis but switch modes. The product co
 ### Font Family
 - **Display**: `SF Pro Display, system-ui, -apple-system, sans-serif` — Apple's proprietary display face, optimized for sizes ≥ 19px. Defines the voice of every headline.
 - **Body / UI**: `SF Pro Text, system-ui, -apple-system, sans-serif` — the text-optimized variant used for body copy, captions, buttons, and links below 20px.
+- **Korean / 한글**: `Pretendard` — 모든 한글 텍스트의 통일 폰트. SF Pro·Inter는 한글 글리프를 갖지 않으므로, 글리프 폴백상 한글은 항상 Pretendard로 렌더된다. 영문/숫자는 SF Pro(또는 Inter) 룩을 그대로 유지한다.
 - **OpenType features**: `font-variant-numeric: numerator` is enabled on numeric links (pricing tables, spec sheets). Display sizes rely on tight tracking rather than contextual ligatures.
 
 ### Hierarchy
@@ -369,6 +370,15 @@ SF Pro is Apple's proprietary system font. When building off-system:
 - For non-Apple platforms, **Inter** (Google Fonts, variable) is the closest open-source equivalent. Inter at weight 600 with `font-feature-settings: "ss03"` approximates SF Pro's rounded "a" character.
 - Nudge `letter-spacing` down by `-0.01em` on display sizes to re-create the Apple tight feel; Inter's default tracking runs slightly wider than SF Pro.
 - For body text, tighten line-height by `0.03` (from 1.47 → 1.44) when substituting Inter — Inter's taller x-height needs less leading.
+
+#### Korean Text → Pretendard (한글 통일 폰트)
+SF Pro와 Inter 모두 한글 글리프가 없어, 한글은 system-ui(한글 OS의 Malgun Gothic 등)로 떨어진다. 이를 막고 한글을 **Pretendard**로 통일한다.
+
+- 로딩: jsDelivr CDN dynamic subset(빌드 단계 없이 `<link>` 한 줄). 예:
+  `https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css`
+- **스택 순서 규칙**: Pretendard는 반드시 `system-ui` **앞**에 둔다. 그렇지 않으면 한글이 OS 기본 한글 폰트로 새어 통일이 깨진다. 영문은 SF Pro → Inter가 먼저 잡히므로 Apple 룩이 유지되고, 한글만 Pretendard로 떨어진다.
+- 실제 스택(`css/tokens.css` 의 `--font-display`/`--font-text`):
+  `"SF Pro Display"/"SF Pro Text", "Inter", "Pretendard", system-ui, -apple-system, sans-serif`
 
 ## Layout
 
@@ -506,6 +516,7 @@ Error and validation states were not surfaced in the analyzed pages.
 - Don't tighten line-height below 1.47 for body copy — the editorial leading is part of the brand.
 - Don't mix radii grammars — use `{rounded.sm}` for compact utility, `{rounded.lg}` for utility cards, `{rounded.pill}` for pills, and nothing in between (except the rare `{rounded.md}` Pearl Button).
 - Don't use `{colors.primary-on-dark}` (Sky Link Blue) on light surfaces — it's the dark-tile-only variant. Action Blue is for light surfaces.
+- Don't introduce another Korean font — 한글 텍스트는 Pretendard 하나로 통일한다. Pretendard는 폰트 스택에서 `system-ui` 앞에 두어야 한다(뒤에 두면 한글이 OS 기본 폰트로 샌다).
 
 ## Responsive Behavior
 

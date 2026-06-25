@@ -8,7 +8,7 @@
 
 - **마크업/스타일/스크립트**: HTML5 · CSS3(커스텀 프로퍼티) · 바닐라 JavaScript
 - **디자인 시스템**: [DESIGN.md](DESIGN.md) 토큰 → `css/tokens.css` CSS 변수
-- **폰트**: 시스템 폰트(SF Pro) + Inter(Google Fonts 대체)
+- **폰트**: 영문 시스템 폰트(SF Pro) + Inter(비-Apple 대체) · 한글 Pretendard(jsDelivr CDN)
 - **배포**: GitHub Pages (빌드 없음)
 
 > 빌드·npm·Node 가 필요 없습니다. 텍스트 에디터와 브라우저만 있으면 시작할 수 있습니다.
