@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>INU Starter — Home</title>
+    <title>INU Starter — Project</title>
     <meta
       name="description"
-      content="INU 강의용 github.io 정적 웹서비스 스타터킷"
+      content="이용진의 학기 중 프로젝트 및 활동 소개"
     />
 
     <!-- FOUC 가드 : paint 전에 테마 확정 (다크 기본, localStorage/시스템 반영) -->
@@ -55,12 +55,12 @@
       <!-- 히어로 : 딥스페이스 정적 히어로 (별자리 캔버스 없음) -->
       <section class="hero">
         <div class="hero__inner">
-          <p class="t-eyebrow">INU Lecture Starter Kit</p>
+          <p class="t-eyebrow">Projects</p>
           <h1 class="t-hero-display">
-            강의 프로젝트를 <span class="hero-accent">여기서</span> 시작하세요
+            학기 중 진행한 <span class="hero-accent">프로젝트</span>를 소개합니다
           </h1>
           <p class="t-lead">
-            순수 HTML · CSS · JS. 빌드 없이 github.io 에 바로 배포됩니다.
+            개발과 연구, 두 방향으로 진행한 활동들을 정리했습니다.
           </p>
           <div class="hero__cta">
             <a class="btn btn--primary btn--lg" href="components.html"
@@ -76,70 +76,25 @@
         <p class="t-eyebrow" style="margin-bottom: var(--space-3)">Filter</p>
         <div class="chip-row" style="margin-bottom: var(--space-8)">
           <button class="chip is-active" type="button">전체</button>
-          <button class="chip" type="button">기초</button>
-          <button class="chip" type="button">컴포넌트</button>
-          <button class="chip" type="button">배포</button>
+          <button class="chip" type="button">개발</button>
+          <button class="chip" type="button">연구</button>
         </div>
 
         <div class="card-grid">
           <article class="card">
-            <p class="card__tag">Guide</p>
-            <h2 class="card__title">빠른 시작</h2>
+            <p class="card__tag">Dev</p>
+            <h2 class="card__title">Game Development</h2>
             <p class="card__desc">
-              저장소를 열고 <code>python3 -m http.server</code> 로 미리 봅니다. 새
-              페이지는 about.html 을 복사해 만드세요.
+              Unity 게임 엔진을 이용해 메트로베니아 장르 게임 제작.
             </p>
-            <p class="card__foot">↳ README</p>
           </article>
 
           <article class="card">
-            <p class="card__tag">Tokens</p>
-            <h2 class="card__title">디자인 토큰</h2>
+            <p class="card__tag">Research</p>
+            <h2 class="card__title">ML paper</h2>
             <p class="card__desc">
-              색·타이포·간격·라운드가 DESIGN.md 단일 출처에서 파생됩니다. 스타일링
-              시 <code>var(--token)</code> 만 참조하세요.
+              classical ML 방법론에 대한 논문 제1저자 등재.
             </p>
-            <p class="card__foot">↳ DESIGN.md</p>
-          </article>
-
-          <article class="card">
-            <p class="card__tag">Deploy</p>
-            <h2 class="card__title">GitHub Pages</h2>
-            <p class="card__desc">
-              main 브랜치 root 를 Pages 소스로 지정하면 빌드 단계 없이 즉시
-              공개됩니다.
-            </p>
-            <p class="card__foot">↳ github.io</p>
-          </article>
-
-          <article class="card">
-            <p class="card__tag">Theme</p>
-            <h2 class="card__title">다크 / 라이트</h2>
-            <p class="card__desc">
-              다크 기본에 라이트 토글. data-theme 속성과 localStorage 로 선택이
-              유지됩니다.
-            </p>
-            <p class="card__foot">↳ 우측 상단 ☾</p>
-          </article>
-
-          <article class="card">
-            <p class="card__tag">A11y</p>
-            <h2 class="card__title">접근성 기본</h2>
-            <p class="card__desc">
-              시맨틱 마크업, 키보드 포커스 링, 스크린리더 전용 텍스트를 기본
-              제공합니다.
-            </p>
-            <p class="card__foot">↳ base.css</p>
-          </article>
-
-          <article class="card">
-            <p class="card__tag">Font</p>
-            <h2 class="card__title">3-폰트 시스템</h2>
-            <p class="card__desc">
-              Space Grotesk 디스플레이 · Pretendard 한글/본문 · JetBrains Mono
-              메타. 역할별로 나뉩니다.
-            </p>
-            <p class="card__foot">↳ tokens.css</p>
           </article>
         </div>
       </section>
