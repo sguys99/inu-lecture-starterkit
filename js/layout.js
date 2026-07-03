@@ -19,7 +19,8 @@ const SITE = {
 
 // 네비게이션 항목. href 는 상대경로(앞에 / 없이) — project-site 서브경로 배포 호환.
 const NAV_LINKS = [
-  { href: "index.html", label: "Home" },
+  { href: "index.html", label: "Project" },
+  { href: "cs.html", label: "CS" },
   { href: "about.html", label: "About" },
   { href: "components.html", label: "Components" },
 ];
@@ -28,7 +29,8 @@ const FOOTER_COLUMNS = [
   {
     heading: "프로젝트",
     links: [
-      { href: "index.html", label: "홈" },
+      { href: "index.html", label: "프로젝트" },
+      { href: "cs.html", label: "CS" },
       { href: "about.html", label: "소개" },
       { href: "components.html", label: "컴포넌트" },
     ],
